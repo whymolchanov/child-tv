@@ -5,7 +5,7 @@ from copy import copy
 import curses
 from thread import start_new_thread
 
-VIDEO_FOLDER = '/home/pi/child-tv/video/'
+VIDEO_FOLDER = '/mnt/child-tv/video/'
 all_videos = []
 video_queue = []
 
