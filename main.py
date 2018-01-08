@@ -3,7 +3,6 @@ import subprocess
 from random import shuffle
 from copy import copy
 import curses
-from thread import start_new_thread
 
 VIDEO_FOLDER = '/mnt/child-tv/video/'
 all_videos = []
