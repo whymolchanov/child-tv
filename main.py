@@ -1,5 +1,4 @@
-from os import listdir
-import subprocess
+import os
 from random import shuffle
 from copy import copy
 import curses
@@ -7,13 +6,14 @@ import curses
 VIDEO_FOLDER = '/mnt/child-tv/video/'
 all_videos = []
 video_queue = []
+omxd_file = open('/var/run/omxctl', 'w')
 
 def get_videos():
-    directories = listdir(VIDEO_FOLDER)
+    directories = os.listdir(VIDEO_FOLDER)
     videos = []
 
     for directory in directories:
-        for video_file in listdir(VIDEO_FOLDER + directory):
+        for video_file in os.listdir(VIDEO_FOLDER + directory):
             videos.append(directory + '/' + video_file)
 
     return videos
@@ -22,7 +22,7 @@ all_videos = get_videos()
 
 def play_next_video(collection):
     file_name = collection.pop(0)
-    subprocess.call(['omxplayer', '-b', VIDEO_FOLDER + file_name])
+    os.system('omxplayer -b ' + VIDEO_FOLDER + file_name)
 
 def start_playing():
     video_queue = copy(all_videos)
