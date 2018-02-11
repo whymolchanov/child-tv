@@ -23,3 +23,5 @@ First we need automount flash on system startup
 
 ## Add main script to .bashrc
 inside `.bashrc` *or .zshrc if you use zshell* add `python %some folder where you hold script%/main.py` to auto run script on system start
+
+[IR receiver installation guide and omxplayer integration (RU)](IR-receiver-installation-guilde.md)

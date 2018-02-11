@@ -1,0 +1,1 @@
+Here I place some config examples from my IR receiver -> Raspberry PI integration project experience
