@@ -15,7 +15,7 @@
 1. Клонируем файл `dbuscontrol.sh` из официального репозитория [omxplayer](https://github.com/popcornmix/omxplayer/blob/master/dbuscontrol.sh)
 2. Запихиваем его в `/usr/local/bin`
 3. Проставляем ему права на выполение `chmod +rx`
-4. В `.lircrc` обращаемся к нему как `dbuscontrol pause` (эта команда поставит воспроизводимый файл в omxplayer на паузу, остальные команды - в официальном репозитории omxplayer в README)
+4. В `.lircrc` обращаемся к нему как `dbuscontrol.sh pause` (эта команда поставит воспроизводимый файл в omxplayer на паузу, остальные команды - в официальном репозитории omxplayer в README)
 5. Что еще важно: мне пришлось в своем скрипте `main.py` поменять вызов omxplayer-а с использования модуля `subprocess` на простой вызов `os.system`. Потому что в подпроцессе omxplayer не создавал временные файлы, которые необходмы для работы через d-bus (`/tmp/omxplayerdbus.${USER:-root}`, `/tmp/omxplayerdbus.${USER:-root}.pid`).
 
 **Примеры некоторых конфигурационных файлов лежат в папке config-examples**
