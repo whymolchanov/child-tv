@@ -1,5 +1,6 @@
 ## Add videos to USB flash
 On empty usb flash make `video` folder, and put inside it folder for every cartoon (script will unite it for play)  
+**Requirements for filename:** they mustn't have space inside of filename (e.g. 'some file.avi' doesn't play at all)
 ```
 video --
 	first_cartoon --
