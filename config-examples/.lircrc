@@ -1,0 +1,18 @@
+begin
+    prog = irexec
+    button = KEY_PLAYPAUSE
+    config = dbuscontrol.sh pause
+end	
+
+begin
+    prog = irexec
+    button = KEY_NEXT
+    config = dbuscontrol.sh stop
+end	
+
+begin
+    prog = irexec
+    button = BTN_9
+    config = sudo shutdown -h now
+end	
+
