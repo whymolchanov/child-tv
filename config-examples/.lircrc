@@ -16,3 +16,15 @@ begin
     config = sudo shutdown -h now
 end	
 
+begin
+    prog = irexec
+    button = KEY_VOLUMEDOWN
+    config = dbuscontrol.sh volumedown
+end
+
+begin
+    prog = irexec
+    button = KEY_VOLUMEUP
+    config = dbuscontrol.sh volumeup
+end
+
