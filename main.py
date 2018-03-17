@@ -8,7 +8,9 @@ all_videos = []
 video_queue = []
 omxd_file = open('/var/run/omxctl', 'w')
 
-def get_videos():
+# collect videos from multiple folders to one
+# array that we can use furter to play video
+def collect_videos():
     directories = os.listdir(VIDEO_FOLDER)
     videos = []
 
@@ -18,7 +20,7 @@ def get_videos():
 
     return videos
 
-all_videos = get_videos()
+all_videos = collect_videos()
 
 def play_next_video(collection):
     file_name = collection.pop(0)
